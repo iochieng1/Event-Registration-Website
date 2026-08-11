@@ -1,45 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-    </head>
-    <body>
-        <header>
-            <h1>Kisumu Developer Meetup</h1>
-        </header>
-        <main>
-            <section>
-                <h2>About Event</h2>
-            </section>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kisumu Developer Meetup - Connect, learn, and grow with fellow developers.">
+    <title>Kisumu Developer Meetup</title>
+</head>
 
-            <section>
-                <h2>Schedule</h2>
-            <table>
-                <tr>
-                    <th>Time</th>
-                    <th>Activity</th>
-                </tr>
+<body>
+    <header>
+        <h1>Kisumu Developer Meetup</h1>
+        <p>Connect, Learn, and Grow with the Local Tech Community</p>
+    </header>
+
+    <main>
+        <!-- About Section -->
+        <section id="about">
+            <h2>About the Event</h2>
+            <p>
+                Join developers, designers, and tech enthusiasts from Kisumu
+                for a day of networking, knowledge sharing, and collaboration.
+                Whether you're a beginner or an experienced professional,
+                there's something for everyone.
+            </p>
+        </section>
+
+        <!-- Schedule Section -->
+         
+        <section id="schedule">
+            <h2>Schedule</h2>
+
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Activity</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>09:00 AM</td>
+                        <td>Registration & Networking</td>
+                    </tr>
+                    <tr>
+                        <td>10:00 AM</td>
+                        <td>Opening Remarks</td>
+                    </tr>
+                    <tr>
+                        <td>11:00 AM</td>
+                        <td>Technical Talk: Modern Web Development</td>
+                    </tr>
+                    <tr>
+                        <td>01:00 PM</td>
+                        <td>Lunch Break</td>
+                    </tr>
+                    <tr>
+                        <td>02:00 PM</td>
+                        <td>Panel Discussion & Q&A</td>
+                    </tr>
+                </tbody>
             </table>
         </section>
 
-        <section>
+        <!-- Registration Section -->
+        <section id="register">
             <h2>Register</h2>
 
-            <form>
-                <label>Name</label>
-                <input type="text">
+            <form action="#" method="post">
+                <div>
+                    <label for="name">Name</label><br>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your full name"
+                        required
+                    >
+                </div>
 
-                <label>Email</label>
-                <input type="email">
+                <br>
 
-                <button type="submit">
-                    Register
-                </button>
+                <div>
+                    <label for="email">Email</label><br>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+                </div>
+
+                <br>
+
+                <button type="submit">Register</button>
             </form>
         </section>
-        </main>
-        <footer>
-            <p>Event Website</p>
-        </footer>
-    </body>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Kisumu Developer Meetup. All rights reserved.</p>
+    </footer>
+</body>
 </html>
