@@ -2,9 +2,22 @@
 
 ## Overview
 
-This project is a simple event landing page for a developer meetup in Kisumu. The webpage provides information about the event, displays a schedule section, and includes a registration form for attendees.
+The **Kisumu Developer Meetup** project is a simple event landing page built with HTML5. It provides information about a local developer meetup, displays an event schedule, and allows attendees to register through a form.
 
-The project introduces event website structure and combines several important HTML concepts such as semantic layout, tables, and forms.
+This project demonstrates the use of semantic HTML elements, tables, forms, metadata, accessibility improvements, and basic webpage organization.
+
+---
+
+# Features
+
+* Semantic HTML5 page structure
+* Event information section
+* Schedule table with activities and times
+* Registration form with validation
+* Responsive viewport configuration
+* SEO-friendly metadata
+* Accessible form labels and inputs
+* Structured footer information
 
 ---
 
@@ -20,13 +33,13 @@ Declares the document as an HTML5 webpage.
 
 ### Purpose
 
-* Tells the browser to use HTML5 standards.
+* Ensures browsers render the page using HTML5 standards.
 
 ---
 
 ## 2. `<html>`
 
-The root element of the webpage.
+Root element of the webpage.
 
 ```html
 <html lang="en">
@@ -34,50 +47,59 @@ The root element of the webpage.
 
 ### Purpose
 
-* Contains all page content.
-* Specifies English as the page language.
+* Contains all webpage content.
+* Specifies English as the document language.
 
 ---
 
 ## 3. `<head>`
 
-Stores metadata about the webpage.
+Stores metadata and configuration information.
 
 ```html
 <head>
 ```
 
-### Elements Inside
+### Elements Included
 
-#### `<meta>`
+#### Character Encoding
 
 ```html
 <meta charset="UTF-8">
 ```
 
-### Purpose
+Ensures proper display of text and special characters.
 
-* Supports special characters and proper text display.
+#### Viewport
 
----
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
 
-## Missing Element
+Makes the page adapt better to mobile devices.
 
-A title should be included inside the head section.
+#### Description
 
-Example:
+```html
+<meta name="description"
+      content="Kisumu Developer Meetup - Connect, learn, and grow with fellow developers.">
+```
+
+Provides search engines with a summary of the page.
+
+#### Title
 
 ```html
 <title>Kisumu Developer Meetup</title>
 ```
 
-This title appears on the browser tab.
+Displayed on the browser tab.
 
 ---
 
 ## 4. `<body>`
 
-Contains everything visible on the webpage.
+Contains all visible content displayed to users.
 
 ```html
 <body>
@@ -87,37 +109,23 @@ Contains everything visible on the webpage.
 
 ## 5. `<header>`
 
-Represents the introductory section of the page.
+Introduces the webpage.
 
 ```html
 <header>
     <h1>Kisumu Developer Meetup</h1>
+    <p>Connect, Learn, and Grow with the Local Tech Community</p>
 </header>
 ```
 
 ### Purpose
 
 * Displays the event name.
-* Gives visitors immediate context.
+* Provides a short event slogan.
 
 ---
 
-## 6. `<h1>`
-
-Main page heading.
-
-```html
-<h1>Kisumu Developer Meetup</h1>
-```
-
-### Purpose
-
-* Identifies the event.
-* Improves accessibility and SEO.
-
----
-
-## 7. `<main>`
+## 6. `<main>`
 
 Contains the primary content of the webpage.
 
@@ -127,166 +135,195 @@ Contains the primary content of the webpage.
 
 ### Purpose
 
-* Holds the most important content.
-* Helps screen readers identify page content.
+* Groups the most important content.
+* Improves accessibility.
 
 ---
 
-## 8. `<section>`
+## 7. `<section>`
 
-Groups related content together.
+Used to organize content into meaningful parts.
 
-The page contains three sections:
+The page contains:
 
-### About Event
+### About Section
 
 ```html
-<section>
-    <h2>About Event</h2>
-</section>
+<section id="about">
 ```
 
-### Schedule
+### Schedule Section
 
 ```html
-<section>
-    <h2>Schedule</h2>
-</section>
+<section id="schedule">
 ```
 
-### Register
+### Register Section
 
 ```html
-<section>
-    <h2>Register</h2>
-</section>
+<section id="register">
 ```
 
 ### Purpose
 
-* Organizes the webpage into logical parts.
+* Creates logical content groups.
+* Improves navigation and readability.
 
 ---
 
-## 9. `<h2>`
+## 8. Headings (`<h1>` and `<h2>`)
 
-Secondary headings used for page sections.
-
-Examples:
+### Main Heading
 
 ```html
-<h2>About Event</h2>
+<h1>Kisumu Developer Meetup</h1>
+```
+
+### Section Headings
+
+```html
+<h2>About the Event</h2>
 <h2>Schedule</h2>
 <h2>Register</h2>
 ```
 
 ### Purpose
 
-* Creates structure within the page.
-* Improves readability.
+* Establishes content hierarchy.
+* Improves accessibility and SEO.
 
 ---
 
-## 10. `<table>`
+## 9. Paragraphs (`<p>`)
 
-Creates a table.
+Used throughout the page.
+
+Examples:
 
 ```html
-<table>
+<p>Connect, Learn, and Grow with the Local Tech Community</p>
+```
+
+```html
+<p>
+Join developers, designers, and tech enthusiasts
+from Kisumu for a day of networking and learning.
+</p>
 ```
 
 ### Purpose
 
-* Displays event schedule information.
+* Provides descriptions and supporting information.
 
 ---
 
-## 11. `<tr>`
+## 10. Table Elements
 
-Creates a table row.
+### Table
+
+```html
+<table border="1">
+```
+
+### Table Head
+
+```html
+<thead>
+```
+
+### Table Body
+
+```html
+<tbody>
+```
+
+### Rows
 
 ```html
 <tr>
 ```
 
-### Purpose
-
-* Organizes information horizontally.
-
----
-
-## 12. `<th>`
-
-Creates table headings.
+### Headings
 
 ```html
 <th>Time</th>
 <th>Activity</th>
 ```
 
-### Purpose
-
-* Labels table columns.
-
----
-
-## 13. `<form>`
-
-Creates a registration form.
+### Data Cells
 
 ```html
-<form>
+<td>09:00 AM</td>
+<td>Registration & Networking</td>
 ```
 
 ### Purpose
 
-* Collects attendee information.
+* Displays event schedule information in a structured format.
 
 ---
 
-## 14. `<label>`
-
-Describes an input field.
-
-Examples:
+## 11. Form
 
 ```html
-<label>Name</label>
-<label>Email</label>
+<form action="#" method="post">
 ```
 
 ### Purpose
 
-* Helps users understand what information is required.
+* Collects attendee registration information.
 
 ---
 
-## 15. `<input>`
-
-Accepts user input.
-
-Name field:
+## 12. Labels
 
 ```html
-<input type="text">
-```
-
-Email field:
-
-```html
-<input type="email">
+<label for="name">Name</label>
+<label for="email">Email</label>
 ```
 
 ### Purpose
 
-* Allows users to enter information.
-* Email type provides built-in validation.
+* Improves accessibility.
+* Associates labels with input fields.
 
 ---
 
-## 16. `<button>`
+## 13. Inputs
 
-Creates a clickable button.
+### Name Field
+
+```html
+<input
+    type="text"
+    id="name"
+    name="name"
+    placeholder="Enter your full name"
+    required
+>
+```
+
+### Email Field
+
+```html
+<input
+    type="email"
+    id="email"
+    name="email"
+    placeholder="Enter your email"
+    required
+>
+```
+
+### Purpose
+
+* Accepts user information.
+* Provides built-in validation.
+* Displays helpful placeholder text.
+
+---
+
+## 14. Button
 
 ```html
 <button type="submit">
@@ -300,87 +337,22 @@ Creates a clickable button.
 
 ---
 
-## 17. `<footer>`
-
-Represents the footer section.
+## 15. Footer
 
 ```html
 <footer>
 ```
 
-### Purpose
-
-* Displays information at the bottom of the page.
-
----
-
-## 18. `<p>`
-
-Creates a paragraph.
+Example:
 
 ```html
-<p>Event Website</p>
+<p>&copy; 2026 Kisumu Developer Meetup. All rights reserved.</p>
 ```
 
 ### Purpose
 
-* Displays footer text.
-
----
-
-## Error 2: Extra Closing Section Tag
-
-The code contains:
-
-```html
-</section>
-```
-
-after the table without a matching opening section.
-
-This creates invalid HTML structure.
-
-The table should remain inside the Schedule section.
-
-Correct structure:
-
-```html
-<section>
-    <h2>Schedule</h2>
-
-    <table>
-        ...
-    </table>
-</section>
-```
-
----
-
-## Suggested Schedule Table
-
-```html
-<table>
-    <tr>
-        <th>Time</th>
-        <th>Activity</th>
-    </tr>
-
-    <tr>
-        <td>09:00 AM</td>
-        <td>Registration</td>
-    </tr>
-
-    <tr>
-        <td>10:00 AM</td>
-        <td>Web Development Session</td>
-    </tr>
-
-    <tr>
-        <td>12:00 PM</td>
-        <td>Networking</td>
-    </tr>
-</table>
-```
+* Displays copyright information.
+* Appears at the bottom of the page.
 
 ---
 
@@ -391,92 +363,71 @@ HTML
 │
 ├── Head
 │   ├── Meta Charset
-│   └── Title (Recommended)
+│   ├── Viewport Meta
+│   ├── Description Meta
+│   └── Title
 │
 └── Body
     ├── Header
-    │   └── H1
+    │   ├── H1
+    │   └── Intro Paragraph
     │
     ├── Main
-    │   ├── About Event Section
+    │   ├── About Section
     │   ├── Schedule Section
     │   │   └── Table
+    │   │       ├── Thead
+    │   │       └── Tbody
     │   │
     │   └── Register Section
     │       └── Form
     │           ├── Labels
     │           ├── Inputs
-    │           └── Button
+    │           └── Submit Button
     │
     └── Footer
-        └── Paragraph
+        └── Copyright Text
 ```
 
 ---
 
-# Improvements To Make
+# Accessibility Improvements
 
-### Add Event Description
+This version includes several accessibility enhancements:
 
-```html
-<p>
-Learn web development, networking, and career growth
-with fellow developers in Kisumu.
-</p>
-```
+* Labels connected to form fields using `for` and `id`.
+* Semantic elements such as `header`, `main`, `section`, and `footer`.
+* Proper heading hierarchy.
+* Required form validation.
+* Descriptive placeholder text.
 
-### Add Event Location
+---
 
-```html
-<p>Venue: Kisumu Innovation Hub</p>
-```
+# Future Enhancements
 
-### Add Date
+Potential improvements include:
 
-```html
-<p>Date: 15 July 2026</p>
-```
-
-### Add Required Validation
-
-```html
-<input type="text" required>
-
-<input type="email" required>
-```
-
-### Add Placeholder Text
-
-```html
-<input type="text" placeholder="Enter your name">
-
-<input type="email" placeholder="Enter your email">
-```
-
-### Add CSS Styling
-
-Style:
-
-* Header
-* Schedule table
-* Registration form
-* Buttons
-* Footer
+* Add external CSS styling.
+* Improve mobile responsiveness.
+* Add event location and date.
+* Include speaker profiles.
+* Add navigation links.
+* Connect the registration form to a backend service.
 
 ---
 
 # Learning Outcomes
 
-After completing this project, you should understand:
+By completing this project, you will gain experience with:
 
-* Semantic HTML structure
-* Event landing page design
-* Tables
-* Forms
-* Labels and inputs
-* Buttons
-* Sections
-* Headers and footers
-* Basic validation concepts
+* Semantic HTML5 structure
+* Metadata and SEO basics
+* Responsive webpage setup
+* Tables and tabular data
+* Forms and validation
+* Accessibility best practices
+* Page organization and hierarchy
+* Event landing page development
 
-This project is a solid beginner event website and combines multiple HTML skills into a single practical webpage.
+This project serves as a practical introduction to building well-structured and accessible webpages using HTML.
+
